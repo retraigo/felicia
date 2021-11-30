@@ -6,7 +6,7 @@
         <li>
           Copyright
           <a
-            href="https://twitter.com/retraigo"
+            href="https://github.com/retraigo"
             target="_blank"
             class="font-bold"
           >
@@ -24,7 +24,6 @@ Idk what to put here
 
   <script>
   export default {
-    name: "footer",
   }
    </script>
   
