@@ -33,15 +33,14 @@ export default {
       class="
         bg-white
         shadow-md
-        border-b
-        border-gray-400
+        border-b-2
+        border-gray-500
         max-w-full
         block
         w-full
         top-0
         fixed
         z-50
-        md:static
       "
     >
       <div class="max-w-9xl mx-auto px-2 md:px-6 lg:px-8 md:mt-4">
@@ -106,7 +105,7 @@ export default {
               flex-1 flex
               fixed
               md:static
-              items-center
+              items-center 
               md:items-stretch
               md:justify-start
             "
@@ -224,7 +223,7 @@ export default {
                           absolute
                           flex
                           bg-white
-                          border-b
+                          border-t
                           w-48
                           border-gray-400
                           shadow-md
@@ -240,7 +239,7 @@ export default {
                           group-focus:translate-y-9 group-focus:visible
                         "
                       >
-                        <a
+                        <NuxtLink
                           v-for="{ name2, route2, key2 } in route"
                           :key="key2"
                           class="
@@ -250,8 +249,8 @@ export default {
                             hover:bg-gray-100
                             hover:text-black
                           "
-                          :href="route2"
-                          >{{ name2 }}</a
+                          :to="route2"
+                          >{{ name2 }}</NuxtLink
                         >
                       </div>
                     </a>

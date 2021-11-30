@@ -35,12 +35,24 @@ export default [
         route2: `contacts`,
         key2: `contacts`,
       },
-    ],    key: `organization`,
+    ],
+    key: `organization`,
     icon: `globe`,
   },
   {
     name: `Program`,
-    route: `multiple`,
+    route: [
+      {
+        name2: `Placeholder`,
+        route2: `committee`,
+        key2: `committee`,
+      },
+      {
+        name2: `Placeholder`,
+        route2: `contacts`,
+        key2: `contacts`,
+      },
+    ],
     key: `program`,
     icon: `tv`,
   },
@@ -49,5 +61,11 @@ export default [
     route: `/news`,
     key: `news`,
     icon: `plussquare`,
+  },
+  {
+    name: `For Participants`,
+    route: `/news`,
+    key: `participants`,
+    icon: `participant`,
   },
 ];
