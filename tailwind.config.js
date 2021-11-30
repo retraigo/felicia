@@ -17,7 +17,8 @@ module.exports = {
       },
       extend: {
         fontFamily: {
-          'open': ['Open Sans', 'sans-serif']
+          'open': ['Open Sans', 'sans-serif'],
+          'montserrat': ['Montserrat', 'sans-serif']
         },
         padding: {
           '30x': "30%"
