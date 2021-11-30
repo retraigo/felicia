@@ -7,26 +7,47 @@ export default [
   },
   {
     name: `Submissions`,
-    route: `/multiple`,
+    route: [
+      {
+        name2: `Call For Paper`,
+        route2: `call`,
+        key2: `call`,
+      },
+      {
+        name2: `Important Dates`,
+        route2: `dates`,
+        key2: `dates`,
+      },
+    ],
     key: `submissions`,
-    icon: `sus`,
+    icon: `file`,
   },
   {
     name: `Organization`,
-    route: `multiple`,
-    key: `organization`,
-    icon: `sus`,
+    route: [
+      {
+        name2: `Committee`,
+        route2: `committee`,
+        key2: `committee`,
+      },
+      {
+        name2: `Contacts`,
+        route2: `contacts`,
+        key2: `contacts`,
+      },
+    ],    key: `organization`,
+    icon: `globe`,
   },
   {
     name: `Program`,
     route: `multiple`,
     key: `program`,
-    icon: `sus`,
+    icon: `tv`,
   },
   {
     name: `News`,
     route: `/news`,
     key: `news`,
-    icon: `news`,
+    icon: `plussquare`,
   },
 ];
