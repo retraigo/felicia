@@ -2,6 +2,12 @@
 <div>
     <SVGHome v-if = "name.toLowerCase() == 'home'" />
     <SVGSus v-if = "name.toLowerCase() == 'sus'" />
+        <SVGFile v-if = "name.toLowerCase() == 'file'" />
+    <SVGPlusSquare v-if = "name.toLowerCase() == 'plussquare'" />
+    <SVGTV v-if = "name.toLowerCase() == 'tv'" />
+    <SVGGlobe v-if = "name.toLowerCase() == 'globe'" />
+
+
 </div>
 </template>
 <script>
