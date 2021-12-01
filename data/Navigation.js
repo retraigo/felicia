@@ -26,9 +26,14 @@ export default [
     name: `Organization`,
     route: [
       {
-        name2: `Committee`,
+        name2: `Program Committee`,
         route2: `committee`,
         key2: `committee`,
+      },
+      {
+        name2: `Organizer`,
+        route2: `organizer`,
+        key2: `organizer`,
       },
       {
         name2: `Contacts`,
@@ -43,14 +48,19 @@ export default [
     name: `Program`,
     route: [
       {
-        name2: `Placeholder`,
-        route2: `committee`,
-        key2: `committee`,
+        name2: `Conference`,
+        route2: `conference`,
+        key2: `conference`,
       },
       {
-        name2: `Placeholder`,
-        route2: `contacts`,
-        key2: `contacts`,
+        name2: `Keynote Speakers`,
+        route2: `speakers/keynote`,
+        key2: `keynote`,
+      },
+      {
+        name2: `Invite Speakers`,
+        route2: `speakers/invite`,
+        key2: `invite`,
       },
     ],
     key: `program`,

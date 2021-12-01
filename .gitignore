@@ -93,3 +93,4 @@ store/README.md
 
 # pnpm lockfile
 package-lock.json
+pnpm-lock.yaml
