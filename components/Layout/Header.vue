@@ -33,7 +33,6 @@ export default {
     class="
       bg-black md:bg-white
       shadow-md
-      border-b-2 border-gray-500
       max-w-full
       block
       w-full
