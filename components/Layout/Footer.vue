@@ -13,7 +13,6 @@
           >
             NeTT
           </a>
-          (I just put this coz I felt like it)
         </li>
       </div>
       <div class="flex-initial mt-3 sm:mt-0">
