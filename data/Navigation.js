@@ -9,14 +9,19 @@ export default [
     name: `Submissions`,
     route: [
       {
+        name2: `Important Dates`,
+        route2: `/program/dates`,
+        key2: `dates`,
+      },
+      {
         name2: `Call For Paper`,
-        route2: `call`,
+        route2: `/call`,
         key2: `call`,
       },
       {
-        name2: `Important Dates`,
-        route2: `dates`,
-        key2: `dates`,
+        name2: `Paper Submission`,
+        route2: `/submission`,
+        key2: `submission`,
       },
     ],
     key: `submissions`,
@@ -27,17 +32,17 @@ export default [
     route: [
       {
         name2: `Program Committee`,
-        route2: `committee`,
+        route2: `/program/committee`,
         key2: `committee`,
       },
       {
         name2: `Organizer`,
-        route2: `organizer`,
+        route2: `/program/organizer`,
         key2: `organizer`,
       },
       {
         name2: `Contacts`,
-        route2: `contacts`,
+        route2: `/program/contacts`,
         key2: `contacts`,
       },
     ],
@@ -49,17 +54,17 @@ export default [
     route: [
       {
         name2: `Conference`,
-        route2: `conference`,
+        route2: `/conference`,
         key2: `conference`,
       },
       {
         name2: `Keynote Speakers`,
-        route2: `speakers/keynote`,
+        route2: `/speakers/keynote`,
         key2: `keynote`,
       },
       {
         name2: `Invite Speakers`,
-        route2: `speakers/invite`,
+        route2: `/speakers/invite`,
         key2: `invite`,
       },
     ],
@@ -71,6 +76,12 @@ export default [
     route: `/news`,
     key: `news`,
     icon: `plussquare`,
+  },
+  {
+    name: `Venue`,
+    route: `/venue`,
+    key: `venue`,
+    icon: `nav`,
   },
   {
     name: `For Participants`,
