@@ -4,6 +4,9 @@
 pnpm > npm because npm sucks.
 ```bash
 
+# Clone repo
+$ git clone https://github.com/retraigo/felicia.git && cd felicia
+
 # Install deps
 $ pnpm i
 
