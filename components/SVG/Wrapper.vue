@@ -6,7 +6,7 @@
     <SVGPlusSquare v-if="name.toLowerCase() == 'plussquare'" />
     <SVGTV v-if="name.toLowerCase() == 'tv'" />
     <SVGGlobe v-if="name.toLowerCase() == 'globe'" />
-
+    <SVGNav v-if="name.toLowerCase() == 'nav'" />
     <SVGParticipant v-if="name.toLowerCase() == 'participant'" />
   </div>
 </template>
