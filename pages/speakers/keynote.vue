@@ -18,7 +18,7 @@
             Keynote Speakers:
           </div>
           <div class="flex flex-col items-start w-full">
-            <MiscArticle
+            <MiscPerson
               :news="article"
               v-for="article in articles"
               :key="article.title"
@@ -33,9 +33,9 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const article = await $content("speakers/invite").fetch();
+    const articles = await $content("speakers/invite").fetch();
     return {
-      article,
+      articles,
     };
   },
 };

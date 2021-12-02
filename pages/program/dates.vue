@@ -4,7 +4,8 @@
       <div
         class="
           flex
-          md:flex-row md:space-x-12
+          md:flex-row
+          md:space-x-12
           flex-col
           items-stretch
           md:justify-between
@@ -15,13 +16,13 @@
           <div
             class="p-2 text-gray-700 font-semibold border-gray-400 border-b-2"
           >
-            Invite Speakers:
+            Important Dates:
           </div>
-          <div class="flex flex-col items-start w-full">
-            <MiscPerson
+          <div
+            class="flex flex-col items-start w-full"
+          >
+            <MiscArticle
               :news="article"
-              v-for="article in articles"
-              :key="article.title"
             />
           </div>
         </div>
@@ -33,9 +34,10 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const articles = await $content("speakers/invite").fetch();
+    const article = await $content("dates")
+      .fetch();
     return {
-      articles,
+      article,
     };
   },
 };
