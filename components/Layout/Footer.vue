@@ -1,7 +1,8 @@
 
 <template>
-<footer class="bg-white border-t border-gray-400 shadow-md md:bg-opacity-70 text-center md:text-left">
-    <ul class="sm:flex items-center justify-between max-w-6xl mx-auto py-4 px-4 md:px-8 text-sm text-black">
+<footer class="bg-black md:bg-white shadow-md text-center md:text-left">
+  <LayoutPreFooter />
+    <ul class="sm:flex items-center justify-between max-w-6xl mx-auto py-4 px-4 md:px-8 text-sm text-white md:text-black">
       <div class="flex-1">
         <li>
           Copyright
