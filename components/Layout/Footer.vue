@@ -16,8 +16,13 @@
         </li>
       </div>
       <div class="flex-initial mt-3 sm:mt-0">
-Idk what to put here
-      </div>
+          <a
+            href="https://ai.srmeaswari.ac.in"
+            target="_blank"
+            class="font-semibold"
+          >
+            Department of AI & DS, SRMEEC
+          </a>      </div>
     </ul>
   </footer>
   </template>

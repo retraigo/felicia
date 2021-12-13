@@ -8,6 +8,7 @@
     <SVGGlobe v-if="name.toLowerCase() == 'globe'" />
     <SVGNav v-if="name.toLowerCase() == 'nav'" />
     <SVGParticipant v-if="name.toLowerCase() == 'participant'" />
+    <SVGPhone v-if="name.toLowerCase() == 'phone'" />
   </div>
 </template>
 <script>
