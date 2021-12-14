@@ -1,3 +1,3 @@
 export default {
-    Name: "Placeholder ig"
+    Name: "IVCMASM 2022"
 }

@@ -41,6 +41,11 @@ export default [
         key2: `organizer`,
       },
       {
+        name2: `Patrons`,
+        route2: `/program/patrons`,
+        key2: `patrons`,
+      },
+      {
         name2: `Contacts`,
         route2: `/program/contacts`,
         key2: `contacts`,
@@ -77,15 +82,15 @@ export default [
     key: `news`,
     icon: `plussquare`,
   },
-  {
+/*  {
     name: `Venue`,
     route: `/venue`,
     key: `venue`,
     icon: `nav`,
-  },
+  },*/
   {
     name: `For Participants`,
-    route: `/news`,
+    route: `/participants`,
     key: `participants`,
     icon: `participant`,
   },
