@@ -1,12 +1,16 @@
 <template>
+<div class = "w-full flex md:flex-row flex-col items-center">
+        <div class = "p-4"><img :src = "news.pic" class = "object-cover w-48 h-48"/></div>
+
   <div class="p-2 flex flex-col justify-start items-start space-y-2 w-full">
     <p class = "text-lg font-semibold">{{news.title}}</p>
         <div class = "text-xs text-gray-700">{{news.description}}</div>
+  </div>
 
-      <nuxt-content
+<!--      <nuxt-content
         class="prose prose-sm"
         :document="news"
-      />
+      />-->
   </div>
 </template>
 <script>

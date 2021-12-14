@@ -33,7 +33,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const articles = await $content("speakers/invite").fetch();
+    const articles = await $content("speakers/keynote").fetch();
     return {
       articles,
     };
