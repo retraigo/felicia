@@ -110,7 +110,7 @@ export default {
             <NuxtLink to="/">
               <img
                 class="h-8 w-auto hidden lg:block"
-                src="/img/90x90.png"
+                src="/EEC_ICON_x100.webp"
                 alt="Placeholder"
               />
             </NuxtLink>
@@ -138,7 +138,7 @@ export default {
               >
                 <img
                   class="h-12 w-auto p-2"
-                  src="/img/90x90.png"
+                  src="/EEC_ICON_x100.webp"
                   alt="Placeholder"
                 />
               </div>
