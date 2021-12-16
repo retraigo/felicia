@@ -2,7 +2,7 @@
   <div class="p-4">
     <div class="flex flex-col w-full items-stretch">
       <div class="p-1">
-        <img src="/placeholder.webp" />
+        <img src="/icvmasm.webp" />
       </div>
       <div
         class="
@@ -15,67 +15,87 @@
         "
       >
         <div class="p-1 md:flex flex-col justify-start hidden">
-          <div class="py-1 text-md">
-            <p class="py-1 text-black font-semibold text-xl">
-              Easwari Engineering College
-            </p>
-            <div class="py-1 flex flex-col md:flex-row items-center">
-              <img class="w-48 h-48 object-cover p-3" src="/EEC_ICON.webp" />
-              <p class="py-1">
-                Easwari Engineering College was instituted in the academic year
-                1996 - 1997, with the Approval of Government of Tamil Nadu and
-                AICTE, New Delhi. As per Govt., Regulations for aﬃliation,
-                originally the college was aﬃliated to the University of Madras,
-                subsequently; the college is aﬃliated to Anna University Chennai
-                since 2002. Pursuing the philosophy of continuous learning, the
-                Institution prepares the students to score creditably in the
-                Academic sessions and also encourages them to develop their
-                interpersonal and intrapersonal skills and attitudes to approach
-                life with confidence.
-              </p>
-            </div>
+          <div class="py-2 text-md">
+              <MiscArticle :news="organizer" />
+
           </div>
         </div>
         <div class="p-1 flex flex-col justify-start">
           <div class="py-1 text-md">
-            <p class="py-1 text-black font-semibold text-xl">IVCMASM-2022</p>
-
             <p class="py-1">
-              <span class="font-semibold"
-                >The INTERNATIONAL VIRTUAL CONFERENCE ON MACHINE LEARNING
-                APPLICATIONS IN APPLIEDSCIENCES AND MATHEMATICS (IVCMASM
-                2022)</span
-              >. The conference focuses on machine learning applications and
-              latest developments in the fields of physics, chemistry,
-              mathematics, social sciences, agriculture, economics and other
-              applied sciences. It targets to bring together researchers from
-              all over the world to present the latest research results, and it
-              is one of the main venues for demonstrating the results of
-              research projects in relevant areas.
+              <MiscArticle :news="about" />
             </p>
           </div>
           <div class="py-1 text-md">
-            <p class="py-1 text-black font-semibold text-xl">
-              Objective of the Conference
-            </p>
             <p class="py-1">
-              The main objective of the conference is to bring together academic
-              and industrial experts of science, mathematics and machine
-              learning community to discuss the most recent advances in
-              applications of machine learning to applied sciences, to highlight
-              key issues, identify trends, and develop a vision of the future
-              from a design, deployment and operation standpoint.
+              <MiscArticle :news="conference" />
             </p>
-            <p class="py-1">
-              The conference aims to be a confluence of the science and
-              engineering communities to discuss the developments in artificial
-              intelligence and its applications to physics, chemistry, biology,
-              social sciences, economics and other applied sciences. It also
-              provides a premier interdisciplinary platform for researchers,
-              practitioners and educators to present and discuss the most recent
-              innovations, trends and concerns in the area as well as practical
-              challenges encountered and solutions adopted.
-            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text-lg">
+          <div
+            class="
+              flex
+              md:flex-row md:space-x-12
+              flex-col
+              items-stretch
+              md:justify-between
+              justify-start
+            "
+          >
+            <div class="py-2 w-full">
+              <div
+                class="
+                  p-2
+                  text-gray-700
+                  font-semibold
+                  border-gray-400 border-b-2
+                "
+              >
+                Conference Tracks:
+              </div>
+              <div class="flex flex-col items-start w-full">
+                <MiscArticle :news="conferencetracks" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text-lg">
+          <div
+            class="
+              flex
+              md:flex-row md:space-x-12
+              flex-col
+              items-stretch
+              md:justify-between
+              justify-start
+            "
+          >
+            <div class="py-2 w-full">
+              <NuxtLink
+                to="/speakers/keynote"
+                class="
+                  p-2
+                  block
+                  text-gray-700
+                  font-semibold
+                  border-gray-400 border-b-2
+                "
+              >
+                Keynote Speakers:
+              </NuxtLink>
+              <div class="flex flex-col md:flex-row items-start w-full">
+                <MiscPersonLite
+                  :news="article"
+                  v-for="article in articles"
+                  :key="article.title"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -83,6 +103,24 @@
   </div>
 </template>
 
+
 <script>
-export default {};
+export default {
+  async asyncData({ $content }) {
+    const conference = await $content("conference").fetch();
+    const conferencetracks = await $content("conferencetracks").fetch();
+        const organizer = await $content("organizer").fetch();
+
+    const about = await $content("about").fetch();
+
+    const articles = await $content("speakers/keynote").fetch();
+    return {
+      about,
+      articles,
+      organizer,
+      conference,
+      conferencetracks,
+    };
+  },
+};
 </script>
