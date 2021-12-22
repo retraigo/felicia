@@ -31,7 +31,11 @@
             v-model="firstname"
             title="First Name"
             placeholder="First Name"
-            :class="`w-full p-2 h-12 bg-gray-100 border ${firstname.length > 0 ? 'border-gray-400' : 'border-red-400'}`"
+            :class="`w-full p-2 h-12 bg-gray-100 border ${
+              firstname == null || firstname.length > 0
+                ? 'border-gray-400'
+                : 'border-red-400'
+            }`"
             type="text"
           />
         </div>
@@ -40,7 +44,11 @@
             v-model="lastname"
             title="Last Name"
             placeholder="Last Name"
-            :class="`w-full p-2 h-12 bg-gray-100 border ${email.length > 0 ? 'border-gray-400' : 'border-red-400'}`"
+            :class="`w-full p-2 h-12 bg-gray-100 border ${
+              lastname == null || lastname.length > 0
+                ? 'border-gray-400'
+                : 'border-red-400'
+            }`"
             type="text"
           />
         </div>
@@ -51,7 +59,11 @@
             v-model="email"
             title="Email"
             placeholder="Email"
-            :class="`w-full p-2 h-12 bg-gray-100 border ${email.length > 0 ? 'border-gray-400' : 'border-red-400'}`"
+            :class="`w-full p-2 h-12 bg-gray-100 border ${
+              email == null || email.length > 0
+                ? 'border-gray-400'
+                : 'border-red-400'
+            }`"
             type="email"
           />
         </div>
@@ -62,7 +74,11 @@
             v-model="phone"
             title="Phone Number"
             placeholder="Phone Number"
-            :class="`w-full p-2 h-12 bg-gray-100 border ${(phone.length > 0 && testPhone() === true) ? 'border-gray-400' : 'border-red-400'}`"
+            :class="`w-full p-2 h-12 bg-gray-100 border ${
+              phone == null || (phone.length > 0 && testPhone() === true)
+                ? 'border-gray-400'
+                : 'border-red-400'
+            }`"
             type="text"
           />
         </div>
@@ -73,7 +89,11 @@
             v-model="organization"
             title="Organization"
             placeholder="Organization / Institution"
-            :class="`w-full p-2 h-12 bg-gray-100 border ${organization.length > 0 ? 'border-gray-400' : 'border-red-400'}`"
+            :class="`w-full p-2 h-12 bg-gray-100 border ${
+              organization == null || organization.length > 0
+                ? 'border-gray-400'
+                : 'border-red-400'
+            }`"
             type="text"
           />
         </div>
@@ -97,17 +117,53 @@
           <label
             for="resume"
             title="Upload your resume"
-            class="block hover:bg-gray-200 transition cursor-pointer duration-500 ease-in-out text-center w-full p-2 h-12 bg-gray-100 border border-gray-400"
-            >+ Upload your Resume</label
+            class="
+              block
+              hover:bg-gray-200
+              transition
+              cursor-pointer
+              duration-500
+              ease-in-out
+              text-center
+              w-full
+              p-2
+              h-12
+              bg-gray-100
+              border border-gray-400
+            "
+            >{{ file }}</label
           >
-          <input id = "resume" type="file" class="hidden" />
+          <input
+            id="resume"
+            type="file"
+            ref="resume"
+            accept=".pdf, .doc, .docx, .odt"
+            @change="handleFile"
+            class="hidden"
+          />
         </div>
       </div>
-            <div class="flex flex-row items-center justify-center w-full">
+      <div class="flex flex-row items-center justify-center w-full">
         <div class="p-2 w-full max-w-sm">
           <button
-            class="hover:bg-gray-200 transition cursor-pointer duration-500 ease-in-out transform hover:translate-y-1 w-full p-2 h-12 bg-gray-100 border border-gray-400"
-          >Submit</button>
+            @click="submitForm"
+            class="
+              hover:bg-gray-200
+              transition
+              cursor-pointer
+              duration-500
+              ease-in-out
+              transform
+              hover:translate-y-1
+              w-full
+              p-2
+              h-12
+              bg-gray-100
+              border border-gray-400
+            "
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>
@@ -115,27 +171,77 @@
 </template>
 <script>
 export default {
-    methods: {
-        submitForm() {
-            this.checkSubmit()
-        },
-        checkSubmit() {
-            return false
-        },
-        testPhone() {
-            return /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(this.phone)
-        }
+  methods: {
+    async submitForm() {
+      if (!this.checkSubmit()) return this.$toast.global.fillAll();
+      const filestuff = new FormData();
+      filestuff.append(
+        "fileData",
+        this.$refs.resume.files[0],
+        this.$refs.resume.files[0].name
+      );
+      filestuff.append("firstname", this.firstname);
+      filestuff.append("lastname", this.lastname);
+      filestuff.append("email", this.email);
+      filestuff.append("file", this.file);
+      filestuff.append("honorific", this.honorific);
+      filestuff.append("organization", this.organization);
 
+      filestuff.append("phone", this.phone);
+      filestuff.append("country", this.country);
+
+      const res = await this.$axios.$post(
+        "http://localhost:1920/join",
+        filestuff
+      );
+      if (res.status !== 200) return this.$toast.global.error();
+      else {
+        this.$toast.global.success();
+        localStorage.setItem("submittedForm", "YES");
+        setTimeout(() => {
+          this.$router.push("/");
+        }, 3000);
+      }
     },
+    checkSubmit() {
+      if (!this.firstname || this.firstname.length < 2) return false;
+      if (!this.lastname || this.lastname.length < 1) return false;
+      if (
+        !this.email ||
+        !/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/.test(this.email)
+      )
+        return false;
+      if (!this.honorific || !this.honorifics.includes(this.honorific))
+        return false;
+      if (!this.phone || !this.testPhone()) return false;
+      if (!this.country || !this.countries.includes(this.country)) return false;
+      if (!this.file || this.file === "+ Upload your Resume (max 20 MB)")
+        return false;
+      if (this.$refs.resume.files[0].size > 2e7) return false;
+      return true;
+    },
+    testPhone() {
+      return /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(
+        this.phone
+      );
+    },
+    handleFile(e) {
+      console.log(e.target.files);
+      this.file = e.target.files
+        ? e.target.files[0].name
+        : "+ Upload your Resume (max 20 MB)";
+    },
+  },
   data() {
     return {
-      firstname: "",
-      lastname: "",
-      email: "",
+      firstname: null,
+      lastname: null,
+      email: null,
+      file: "+ Upload your Resume (max 20 MB)",
       honorific: "def",
-      phone: "",
+      phone: null,
       country: "def",
-      organization: "",
+      organization: null,
       honorifics: ["Mr", "Mrs", "Miss", "Dr", "Prof", "Asst Prof"],
       countries: [
         "Afghanistan",
