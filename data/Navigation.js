@@ -91,8 +91,8 @@ export default [
   },*/
   {
     name: `For Participants`,
-    route: `/participants`,
-    key: `participants`,
+    route: `/join`,
+    key: `join`,
     icon: `participant`,
   },
 ];

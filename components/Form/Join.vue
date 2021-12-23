@@ -111,7 +111,7 @@
             </option>
           </select>
         </div>
-      </div>
+      </div><!--
       <div class="flex flex-row items-center justify-center w-full">
         <div class="p-2 w-full max-w-2xl">
           <label
@@ -142,7 +142,7 @@
             class="hidden"
           />
         </div>
-      </div>
+      </div>-->
       <div class="flex flex-row items-center justify-center w-full">
         <div class="p-2 w-full max-w-sm">
           <button
@@ -175,15 +175,15 @@ export default {
     async submitForm() {
       if (!this.checkSubmit()) return this.$toast.global.fillAll();
       const filestuff = new FormData();
-      filestuff.append(
+/*      filestuff.append(
         "fileData",
         this.$refs.resume.files[0],
         this.$refs.resume.files[0].name
-      );
+      );*/
       filestuff.append("firstname", this.firstname);
       filestuff.append("lastname", this.lastname);
       filestuff.append("email", this.email);
-      filestuff.append("file", this.file);
+//      filestuff.append("file", this.file);
       filestuff.append("honorific", this.honorific);
       filestuff.append("organization", this.organization);
 
@@ -191,7 +191,7 @@ export default {
       filestuff.append("country", this.country);
 
       const res = await this.$axios.$post(
-        "http://localhost:1920/join",
+        "/api/join",
         filestuff
       );
       if (res.status !== 200) return this.$toast.global.error();
@@ -215,9 +215,9 @@ export default {
         return false;
       if (!this.phone || !this.testPhone()) return false;
       if (!this.country || !this.countries.includes(this.country)) return false;
-      if (!this.file || this.file === "+ Upload your Resume (max 20 MB)")
+/*      if (!this.file || this.file === "+ Upload your Resume (max 20 MB)")
         return false;
-      if (this.$refs.resume.files[0].size > 2e7) return false;
+      if (this.$refs.resume.files[0].size > 2e7) return false;*/
       return true;
     },
     testPhone() {
@@ -225,12 +225,12 @@ export default {
         this.phone
       );
     },
-    handleFile(e) {
+/*    handleFile(e) {
       console.log(e.target.files);
       this.file = e.target.files
         ? e.target.files[0].name
         : "+ Upload your Resume (max 20 MB)";
-    },
+    },*/
   },
   data() {
     return {
