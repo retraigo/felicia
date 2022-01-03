@@ -1,14 +1,18 @@
+import Meta from "./data/Meta"
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'felicia',
+    title: 'International Virtual Conference on Machine Learning Applications in Applied Sciences and Mathematics',
+    titleTemplate: `%s - ${Meta.siteName}`,
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: Meta.description },
+      { hid: 'themecolor', name: 'theme-color', content: Meta.themeColor},
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

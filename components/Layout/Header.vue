@@ -9,9 +9,13 @@ export default {
     },
   },
   data() {
+    const toggled = Navigation.map(x => (x.key))
+    const toggled2 = toggled.reduce((acc,curr)=> (acc[curr]=false,acc),{});
     return {
       toggleNav: false,
       Navigation,
+      toggled: toggled2,
+      toggled2,
       Constants,
     };
   },
@@ -25,6 +29,12 @@ export default {
     toggleOn() {
       this.toggleNav = true;
     },
+    setState(ref) {
+      this.toggled[ref] = !this.toggled[ref]
+    },
+    resetState() {
+      this.toggled = this.Navigation.map(x => (x.key)).reduce((acc,curr)=> (acc[curr]=false,acc),{});
+    }
   },
 };
 </script>
@@ -41,7 +51,7 @@ export default {
       z-50
     "
   >
-    <div class="max-w-9xl mx-auto px-2 md:px-6 lg:px-8 md:mt-4">
+    <div class="max-w-7xl mx-auto px-2 md:px-6 lg:px-8 md:mt-4">
       <div class="relative flex items-center justify-between h-16">
         <div class="relative inset-y-0 left-0 flex items-center md:hidden">
           <button
@@ -100,7 +110,7 @@ export default {
         <div
           class="
             flex-1 flex
-            fixed
+            fixed 
             md:static
             items-center
             md:items-stretch md:justify-start
@@ -141,13 +151,14 @@ export default {
                   src="/EEC_ICON_x100.webp"
                   alt="Placeholder"
                 />
+                <span class = "text-white font-bold">{{Constants.Name}}</span>
               </div>
             </NuxtLink>
 
             <div
               class="flex flex-col md:flex-row justify-between space-x-1 w-full"
             >
-              <div class="flex md:space-x-4 flex-col md:flex-row md:pt-0 pt-10">
+              <div class="flex md:space-x-4 flex-col md:flex-row md:justify-between md:w-full md:pt-0 pt-10">
                 <div
                   v-for="{ name, route, key, icon } in Navigation"
                   :key="key"
@@ -201,6 +212,7 @@ export default {
                   <a
                     v-else-if="Array.isArray(route)"
                     :href="'#'"
+                    @click = "x => setState(key)"
                     :class="
                       (title === key ? 'text-gray-700 ' : 'text-black ') +
                       (Array.isArray(route) ? 'group ' : '') +
@@ -212,7 +224,7 @@ export default {
                     <span><SVGDown /></span>
 
                     <div
-                      class="
+                      :class="`
                         absolute
                         flex
                         bg-white
@@ -223,13 +235,13 @@ export default {
                         text-xs
                         p-2
                         flex-col
-                        invisible
+                        ${toggled[key] ? 'vivible translate-y-9' :'invisible'}
                         md:top-10
                         transform
                         transition
                         duration-300
                         ease-in-out
-                        group-focus:translate-y-9 group-focus:visible
+`
                       "
                     >
                       <NuxtLink
@@ -298,7 +310,7 @@ export default {
             :class="`inset-0 w-full md:invisible fixed h-full z-30 block ${
               toggleNav ? 'visible bg-gray-100 bg-opacity-10' : 'invisible'
             }`"
-            @click="toggleOff"
+            @click="x => {toggleOff(); resetState()}"
           ></div>
         </div>
       </div>

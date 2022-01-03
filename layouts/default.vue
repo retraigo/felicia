@@ -9,13 +9,6 @@ export default {
   head() {
     return {
       title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'description',
-        },
-      ],
     }
   },
 }
