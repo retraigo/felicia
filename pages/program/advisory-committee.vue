@@ -16,14 +16,11 @@
           <div
             class="p-2 text-gray-700 font-semibold border-gray-400 border-b-2"
           >
-            Conference Committee:
+            Advisory Committee:
           </div>
           <div
-            class="flex flex-col items-start w-full space-y-4"
+            class="flex flex-col items-start w-full"
           >
-          <MiscArticle
-              :news="article2"
-            />
             <MiscArticle
               :news="article"
             />
@@ -37,13 +34,10 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const article = await $content("committee")
-      .fetch();
-      const article2 = await $content("patrons")
+    const article = await $content("advisorycommittee")
       .fetch();
     return {
       article,
-      article2
     };
   },
 };

@@ -19,7 +19,7 @@ export default [
         key2: `call`,
       },
       {
-        name2: `Paper Submission`,
+        name2: `Registration`,
         route2: `/submission`,
         key2: `submission`,
       },
@@ -39,11 +39,6 @@ export default [
         name2: `Organizer`,
         route2: `/program/organizer`,
         key2: `organizer`,
-      },
-      {
-        name2: `Patrons`,
-        route2: `/program/patrons`,
-        key2: `patrons`,
       },
       {
         name2: `Contacts`,
@@ -90,7 +85,7 @@ export default [
     icon: `nav`,
   },*/
   {
-    name: `For Participants`,
+    name: `Join`,
     route: `/join`,
     key: `join`,
     icon: `participant`,

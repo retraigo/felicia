@@ -1,8 +1,11 @@
 <template>
   <div class="p-4">
-    <div class="flex flex-col w-full items-stretch">
-      <div class="p-1">
+    <div class="flex flex-col space-y-4 w-full items-stretch">
+      <div class="p-1 hidden md:block">
         <img src="/icvmasm.webp" />
+      </div>
+      <div class="p-4">
+        <HomePage />
       </div>
       <div
         class="
@@ -11,54 +14,72 @@
           space-y-4
           md:space-y-0
           justify-between
-          items-stretch
         "
       >
-        <div class="p-1 md:flex flex-col justify-start hidden">
-          <div class="py-2 text-md">
-              <MiscArticle :news="organizer" />
-
-          </div>
-        </div>
         <div class="p-1 flex flex-col justify-start">
           <div class="py-1 text-md">
+            <div
+              class="
+                py-2
+                text-lg text-gray-700
+                font-semibold
+                border-gray-400 border-b-2
+              "
+            >
+              About Conference (IVCMASM - 2022)
+            </div>
             <p class="py-1">
-              <MiscArticle :news="about" />
-            </p>
-          </div>
-          <div class="py-1 text-md">
-            <p class="py-1">
-              <MiscArticle :news="conference" />
+              The International Virtual Conference on Machine Learning
+              Applications in Applied Sciences and Mathematics (IVCMASM 2022).
+              The conference focuses on machine learning applications and latest
+              developments in the Fields of physics, chemistry, mathematics,
+              social sciences, agriculture, economics and other applied
+              sciences. It targets to bring together researchers from all over
+              the world to present the latest research results, and it is one of
+              the main venues for demonstrating the results of research projects
+              in relevant areas.
             </p>
           </div>
         </div>
       </div>
-      <div>
-        <div class="text-lg">
-          <div
-            class="
-              flex
-              md:flex-row md:space-x-12
-              flex-col
-              items-stretch
-              md:justify-between
-              justify-start
-            "
-          >
-            <div class="py-2 w-full">
-              <div
-                class="
-                  p-2
-                  text-gray-700
-                  font-semibold
-                  border-gray-400 border-b-2
-                "
-              >
-                Conference Tracks:
-              </div>
-              <div class="flex flex-col items-start w-full">
-                <MiscArticle :news="conferencetracks" />
-              </div>
+      <div
+        class="
+          flex flex-col
+          md:flex-row md:space-x-4
+          space-y-4
+          md:space-y-0
+          justify-between
+        "
+      >
+        <div class="p-1 flex flex-col justify-start">
+          <div class="py-1 text-md">
+            <div
+              class="
+                py-2
+                text-lg text-gray-700
+                font-semibold
+                border-gray-400 border-b-2
+              "
+            >
+              Organizers, Partners and Indexing
+            </div>
+            <div class="py-1">
+              All Accepted papers will be published in AIP Conference
+              Proceedings that are indexed in a number of services, including
+              but not limited to these leading databases:
+              <ul class="space-y-2 list-disc p-4">
+                <li>
+                  The Conference Proceedings Citation Index (part of Web of
+                  Science)
+                </li>
+                <li>Scopus (Elsevier)</li>
+                <li>Inspec of Clarivate Analytics</li>
+              </ul>
+
+              <p class="text-xl font-bold text-center">
+                IVCMASM 2021 is proud to have partnership with AIP Publishing,
+                United States of America.
+              </p>
             </div>
           </div>
         </div>
@@ -109,7 +130,7 @@ export default {
   async asyncData({ $content }) {
     const conference = await $content("conference").fetch();
     const conferencetracks = await $content("conferencetracks").fetch();
-        const organizer = await $content("organizer").fetch();
+    const organizer = await $content("organizer").fetch();
 
     const about = await $content("about").fetch();
 

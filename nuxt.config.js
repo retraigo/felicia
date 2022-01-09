@@ -13,10 +13,15 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: Meta.description },
       { hid: 'themecolor', name: 'theme-color', content: Meta.themeColor},
+      { hid: 'tilecolor', name: 'msapplication-TileColor', content: Meta.tileColor},
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', sizes: '32x32', type: 'image/png', href: Meta.icon32 },
+      { rel: 'icon', sizes: '16x16', type: 'image/png', href: Meta.icon16 },
+      { rel: 'manifest', href: Meta.manifest },
+      { rel: 'mask-icon',  color: "#5bbad5", href: Meta.maskIcon },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: Meta.apple },
     ]
   },
   target: 'static',

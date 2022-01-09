@@ -32,6 +32,10 @@ export default {
     setState(ref) {
       this.toggled[ref] = !this.toggled[ref]
     },
+    anyState() {
+      if(Object.values(this.toggled).includes(true)) return true;
+      return false;
+    },
     resetState() {
       this.toggled = this.Navigation.map(x => (x.key)).reduce((acc,curr)=> (acc[curr]=false,acc),{});
     }
@@ -55,10 +59,10 @@ export default {
       <div class="relative flex items-center justify-between h-16">
         <div class="relative inset-y-0 left-0 flex items-center md:hidden">
           <button
-            class="
+            :class="`
               inline-flex
               items-center
-              {toggleNav
+              ${toggleNav
               ?
               'hidden'
               :
@@ -69,7 +73,7 @@ export default {
               text-white md:text-gray-700
               hover:text-gray-700
               focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
-            "
+            `"
             @click="toggleOn"
           >
             <span class="sr-only">Open menu</span>
@@ -211,7 +215,7 @@ export default {
                   </NuxtLink>
                   <a
                     v-else-if="Array.isArray(route)"
-                    :href="'#'"
+                    :href="'javascript:void(0)'"
                     @click = "x => setState(key)"
                     :class="
                       (title === key ? 'text-gray-700 ' : 'text-black ') +
@@ -307,8 +311,8 @@ export default {
             </div>
           </div>
           <div
-            :class="`inset-0 w-full md:invisible fixed h-full z-30 block ${
-              toggleNav ? 'visible bg-gray-100 bg-opacity-10' : 'invisible'
+            :class="`inset-0 w-full fixed h-full z-30 block ${
+              (toggleNav || anyState()) ? 'visible bg-gray-100 bg-opacity-10' : 'invisible'
             }`"
             @click="x => {toggleOff(); resetState()}"
           ></div>
