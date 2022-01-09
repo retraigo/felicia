@@ -3,7 +3,7 @@ title: Committee Members
 description: Committee member list.
 ---
 
-## Organization Committee (Students)
+## Organizing Committee (Students)
 * Ms. S. Swetha (II AI & DS)
 * Mr. Asvin (II AI & DS)
 * Ms. Srutileka (II AI & DS) 
