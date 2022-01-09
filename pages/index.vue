@@ -21,7 +21,7 @@
             <div
               class="
                 py-2
-                text-lg text-gray-700
+                text-lg  text-gray-700 dark:text-white
                 font-semibold
                 border-gray-400 border-b-2
               "
@@ -56,7 +56,7 @@
             <div
               class="
                 py-2
-                text-lg text-gray-700
+                text-lg  text-gray-700 dark:text-white
                 font-semibold
                 border-gray-400 border-b-2
               "
@@ -102,7 +102,7 @@
                 class="
                   p-2
                   block
-                  text-gray-700
+                   text-gray-700 dark:text-white
                   font-semibold
                   border-gray-400 border-b-2
                 "

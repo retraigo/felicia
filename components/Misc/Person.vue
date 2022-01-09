@@ -7,11 +7,11 @@
 
   <div class="p-2 flex flex-col justify-start items-start space-y-2 w-full">
     <p class = "text-lg font-semibold">{{news.title}}</p>
-        <div class = "text-xs text-gray-700">{{news.description}}</div>
+        <div class = "text-xs text-gray-700 dark:text-white">{{news.description}}</div>
   </div>
 
 <!--      <nuxt-content
-        class="prose prose-sm"
+        class="prose dark:prose-dark prose-sm"
         :document="news"
       />-->
   </div>

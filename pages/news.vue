@@ -14,7 +14,7 @@
       >
         <div class="py-2 md:w-2/4">
           <div
-            class="p-2 text-gray-700 font-semibold border-gray-400 border-b-2"
+            class="p-2 text-gray-700 dark:text-white font-semibold border-gray-400 border-b-2"
           >
             Latest News:
           </div>
@@ -31,7 +31,7 @@
         </div>
         <div class="py-2 md:w-1/4">
           <div
-            class="p-2 text-gray-700 font-semibold border-gray-400 border-b-2"
+            class="p-2 text-gray-700 dark:text-white font-semibold border-gray-400 border-b-2"
           >
             Important News:
           </div>

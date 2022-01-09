@@ -12,7 +12,7 @@
       >
         <div class="py-2 w-full">
           <div
-            class="p-2 text-gray-700 font-semibold border-gray-400 border-b-2"
+            class="p-2 text-gray-700 dark:text-white font-semibold border-gray-400 border-b-2"
           >
             Call for Papers:
           </div>
@@ -36,7 +36,7 @@
                 <div
                   class="
                     p-2
-                    text-gray-700
+                    text-gray-700 dark:text-white
                     font-semibold
                     border-gray-400 border-b-2
                   "

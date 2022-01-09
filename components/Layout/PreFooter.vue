@@ -1,6 +1,6 @@
 
 <template>
-  <footer class="bg-gray-300 text-center md:text-left md:h-48 block">
+  <footer class="bg-gray-300 dark:bg-gray-700 text-center md:text-left md:h-48 block">
     <ul
       class="
         flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4
@@ -12,7 +12,7 @@
         py-4
         px-4
         md:px-8
-        text-sm text-black
+        text-sm text-black dark:text-white
       "
     >
       <div class="flex h-full">

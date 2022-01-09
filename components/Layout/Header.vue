@@ -45,7 +45,7 @@ export default {
 <template>
   <div
     class="
-      bg-black md:bg-white
+      dark:bg-blue-400 bg-black md:bg-white md:dark:bg-blue-400
       shadow-md
       max-w-full
       block
@@ -70,8 +70,8 @@ export default {
               justify-center
               p-2
               rounded-md
-              text-white md:text-gray-700
-              hover:text-gray-700
+              text-white md:text-gray-700 dark:text-white
+              hover:text-gray-700 dark:text-white
               focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
             `"
             @click="toggleOn"
@@ -172,7 +172,7 @@ export default {
                     :to="typeof route == 'string' ? route : '#'"
                     :class="
                       (title === key
-                        ? 'text-gray-700 border-gray-400 '
+                        ? 'text-gray-700 dark:text-white border-gray-400 '
                         : 'text-black border-transparent ') +
                       (Array.isArray(route) ? 'group ' : '') +
                       'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-b-2  block'
@@ -218,7 +218,7 @@ export default {
                     :href="'javascript:void(0)'"
                     @click = "x => setState(key)"
                     :class="
-                      (title === key ? 'text-gray-700 ' : 'text-black ') +
+                      (title === key ? 'text-gray-700 dark:text-white ' : 'text-black ') +
                       (Array.isArray(route) ? 'group ' : '') +
                       'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-transparent border-b-2  block'
                     "
@@ -266,7 +266,7 @@ export default {
                     v-else
                     :href="typeof route == 'string' ? route : '#'"
                     :class="
-                      (title === key ? 'text-gray-700 ' : 'text-black ') +
+                      (title === key ? 'text-gray-700 dark:text-white ' : 'text-black ') +
                       (Array.isArray(route) ? 'group ' : '') +
                       'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-transparent border-b-2  block'
                     "

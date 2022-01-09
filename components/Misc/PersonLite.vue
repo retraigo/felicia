@@ -8,11 +8,11 @@
 
     <div class="p-2 flex flex-col justify-start items-center space-y-2 w-full">
       <p class="text-lg font-semibold">{{ news.title }}</p>
-      <div class="text-xs text-gray-700">{{ desc[desc.length - 2] }}, {{desc[desc.length - 1]}}</div>
+      <div class="text-xs text-gray-700 dark:text-white">{{ desc[desc.length - 2] }}, {{desc[desc.length - 1]}}</div>
     </div>
 
     <!--      <nuxt-content
-        class="prose prose-sm"
+        class="prose dark:prose-dark prose-sm"
         :document="news"
       />-->
   </div>

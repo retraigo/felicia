@@ -1,6 +1,6 @@
 
 <template>
-<footer class="bg-black md:bg-white shadow-md text-center md:text-left">
+<footer class="dark:bg-blue-400 md:dark:bg-blue-400 bg-black md:bg-white shadow-md text-center md:text-left">
   <LayoutPreFooter />
     <ul class="sm:flex items-center justify-between max-w-6xl mx-auto py-4 px-4 md:px-8 text-sm text-white md:text-black">
       <div class="flex-1">
