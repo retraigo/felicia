@@ -1,6 +1,7 @@
 ---
 title: Conference Program
-description: Conference objective
+description: The main objective of the conference is to bring together academic and industrial experts of science, mathematics and machine learning community to discuss the most recent advances in applications of machine learning to applied sciences, to highlight key issues, identify trends, and develop a vision of the future from a design, deployment and operation standpoint. 
+
 ---
 
 ## Objective of the Conference

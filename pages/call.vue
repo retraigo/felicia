@@ -1,18 +1,16 @@
 <template>
   <div class="p-8">
     <div class="text-lg">
-      <div
-        class="
-          flex
-          flex-col
-          items-stretch
-          md:justify-between
-          justify-start
-        "
-      >
+      <div class="flex flex-col items-stretch md:justify-between justify-start">
         <div class="py-2 w-full">
           <div
-            class="p-2 text-gray-700 dark:text-white font-semibold border-gray-400 border-b-2"
+            class="
+              p-2
+              text-gray-700
+              dark:text-white
+              font-semibold
+              border-gray-400 border-b-2
+            "
           >
             Call for Papers:
           </div>
@@ -36,7 +34,8 @@
                 <div
                   class="
                     p-2
-                    text-gray-700 dark:text-white
+                    text-gray-700
+                    dark:text-white
                     font-semibold
                     border-gray-400 border-b-2
                   "
@@ -57,6 +56,17 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Call For Papers",
+      meta: [
+        { hid: "title", name: "title", content: "Call For Papers" },
+        { hid: "og:title", name: "og:title", content: "Call For Papers" },
+        { hid: "description", name: "description", content: article.description },
+        { hid: "og:description", name: "og:description", content: article.description },
+      ],
+    };
+  },
   async asyncData({ $content }) {
     const article = await $content("call").fetch();
     const conferencetracks = await $content("conferencetracks").fetch();

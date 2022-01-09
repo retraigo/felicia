@@ -8,6 +8,9 @@ export default {
     maskIcon: "/safari-pinned-tab.svg",
     manifest: "/site.webmanifest",
     apple: "/apple-touch-icon.png",
+    determiner: "the",
+    type: "website"
+
 }
 
 

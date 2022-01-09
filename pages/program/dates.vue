@@ -4,8 +4,7 @@
       <div
         class="
           flex
-          md:flex-row
-          md:space-x-12
+          md:flex-row md:space-x-12
           flex-col
           items-stretch
           md:justify-between
@@ -14,16 +13,18 @@
       >
         <div class="py-2 w-full">
           <div
-            class="p-2 text-gray-700 dark:text-white font-semibold border-gray-400 border-b-2"
+            class="
+              p-2
+              text-gray-700
+              dark:text-white
+              font-semibold
+              border-gray-400 border-b-2
+            "
           >
             Important Dates:
           </div>
-          <div
-            class="flex flex-col items-start w-full"
-          >
-            <MiscArticle
-              :news="article"
-            />
+          <div class="flex flex-col items-start w-full">
+            <MiscArticle :news="article" />
           </div>
         </div>
       </div>
@@ -33,9 +34,25 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Important Dates",
+      meta: [
+        {
+          hid: "title",
+          name: "title",
+          content: "Important Dates",
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Important Dates",
+        },
+      ],
+    };
+  },
   async asyncData({ $content }) {
-    const article = await $content("dates")
-      .fetch();
+    const article = await $content("dates").fetch();
     return {
       article,
     };

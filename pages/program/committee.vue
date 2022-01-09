@@ -36,6 +36,23 @@
 
 <script>
 export default {
+    head() {
+    return {
+      title: "Program Committee",
+      meta: [
+        {
+          hid: "title",
+          name: "title",
+          content: "Program Committee",
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Program Committee",
+        },
+      ],
+    };
+  },
   async asyncData({ $content }) {
     const article = await $content("committee")
       .fetch();

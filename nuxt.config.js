@@ -13,6 +13,12 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: Meta.description },
       { hid: 'themecolor', name: 'theme-color', content: Meta.themeColor},
+      { hid: 'og:description', name: 'og:description', content: Meta.description },
+      { hid: 'og:image', name: 'og:image', content: Meta.apple },
+      { hid: 'og:imageAlt', name: 'og:image:alt', content: Meta.siteName },
+      { hid: 'og:siteName', name: 'og:site_name', content: Meta.siteName },
+      { hid: 'og:determiner', name: 'og:determiner', content: Meta.determiner },
+      { hid: 'og:type', name: 'og:type', content: Meta.type },
       { hid: 'tilecolor', name: 'msapplication-TileColor', content: Meta.tileColor},
       { name: 'format-detection', content: 'telephone=no' }
     ],

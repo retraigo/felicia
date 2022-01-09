@@ -33,6 +33,23 @@
 
 <script>
 export default {
+    head() {
+    return {
+      title: "Contact Info",
+      meta: [
+        {
+          hid: "title",
+          name: "title",
+          content: "Contact Info",
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Contact Info",
+        },
+      ],
+    };
+  },
   async asyncData({ $content }) {
     const article = await $content("contacts")
       .fetch();

@@ -13,7 +13,13 @@
       >
         <div class="py-2 w-full">
           <div
-            class="p-2 text-gray-700 dark:text-white font-semibold border-gray-400 border-b-2"
+            class="
+              p-2
+              text-gray-700
+              dark:text-white
+              font-semibold
+              border-gray-400 border-b-2
+            "
           >
             Keynote Speakers:
           </div>
@@ -32,6 +38,25 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Keynote Speakers",
+      meta: [
+        { hid: "title", name: "title", content: "Keynote Speakers" },
+        { hid: "og:title", name: "og:title", content: "Keynote Speakers" },
+        {
+          hid: "description",
+          name: "description",
+          content: article.description,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: article.description,
+        },
+      ],
+    };
+  },
   async asyncData({ $content }) {
     const articles = await $content("speakers/keynote").fetch();
     return {

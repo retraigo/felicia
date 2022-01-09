@@ -26,7 +26,13 @@
         >
           <div class="py-2 w-full">
             <div
-              class="p-2 text-gray-700 dark:text-white font-semibold border-gray-400 border-b-2"
+              class="
+                p-2
+                text-gray-700
+                dark:text-white
+                font-semibold
+                border-gray-400 border-b-2
+              "
             >
               Conference Tracks:
             </div>
@@ -42,6 +48,25 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "About The Conference",
+      meta: [
+        { hid: "title", name: "title", content: "About The Conference" },
+        { hid: "og:title", name: "og:title", content: "About The Conference" },
+        {
+          hid: "description",
+          name: "description",
+          content: conference.description,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: conference.description,
+        },
+      ],
+    };
+  },
   async asyncData({ $content }) {
     const conference = await $content("conference").fetch();
     const conferencetracks = await $content("conferencetracks").fetch();

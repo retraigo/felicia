@@ -1,6 +1,6 @@
 ---
 title: Paper Submission
-description: Details and info for paper submission
+description: Details about registration fee is given here. All Accepted papers will be published in AIP Conference Proceedings.
 ---
 
 ## Registration Fee

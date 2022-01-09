@@ -33,6 +33,33 @@
 
 <script>
 export default {
+    head() {
+    return {
+      title: "Advisory Committee",
+      meta: [
+        {
+          hid: "title",
+          name: "title",
+          content: "Advisory Committee",
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Advisory Committee",
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: article.description,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: article.description,
+        },
+      ],
+    };
+  },
   async asyncData({ $content }) {
     const article = await $content("advisorycommittee")
       .fetch();
