@@ -9,6 +9,7 @@ export default {
     manifest: "/site.webmanifest",
     apple: "/apple-touch-icon.png",
     determiner: "the",
+    image: "https://cdn.srmeaswari.ac.in/2020/09/eec-logo-finalized.png",
     type: "website"
 
 }

@@ -14,7 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: Meta.description },
       { hid: 'themecolor', name: 'theme-color', content: Meta.themeColor},
       { hid: 'og:description', name: 'og:description', content: Meta.description },
-      { hid: 'og:image', name: 'og:image', content: Meta.apple },
+      { hid: 'og:image', name: 'og:image', content: Meta.image },
       { hid: 'og:imageAlt', name: 'og:image:alt', content: Meta.siteName },
       { hid: 'og:siteName', name: 'og:site_name', content: Meta.siteName },
       { hid: 'og:determiner', name: 'og:determiner', content: Meta.determiner },
