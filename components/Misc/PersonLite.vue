@@ -2,7 +2,7 @@
   <div class="w-full flex flex-col items-center">
     <div class="p-4">
       <div class = "w-40 h-40 p-2 flex flex-col items-center justify-center border-dashed border-blue-300 border-4 rounded-full">
-      <img :src="news.pic" class="object-cover w-36 h-36 rounded-full border-gray-400 border-4 border-double" />
+      <img :src="news.pic" :alt = "news.title" class="object-cover w-36 h-36 rounded-full border-gray-400 border-4 border-double" />
       </div>
     </div>
 
