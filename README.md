@@ -1,7 +1,7 @@
 # felicia
 
 ## How to run
-pnpm > npm because npm sucks.
+Install `pnpm` first.
 ```bash
 
 # Clone repo
