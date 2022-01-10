@@ -17,10 +17,11 @@
     >
       <div class="flex h-full">
         <div class="md:flex flex-row space-y-4 md:space-y-0 md:space-x-4 items-center justify-center">
+          <img class="h-36 w-auto object-fit mx-auto" src="/EEC_ICON.webp" />
+
           <img class="h-36 w-auto object-fit mx-auto" src="/icons/1.svg" />
-          <img class="h-36 w-auto object-fit mx-auto" src="/icons/2.svg" />
-          <img class="h-36 w-auto object-fit mx-auto" src="/icons/3.svg" />
-          <img class="h-36 w-auto object-fit mx-auto" src="/icons/4.svg" />
+          <div class = "p-2">IVCMASM 2021 is proud to have partnership with AIP Publishing,
+                United States of America.</div>
         </div>
       </div>
       <ul class="flex-initial flex flex-col items-start space-y-4 mt-3 sm:mt-0">
@@ -47,6 +48,14 @@
             href="https://www.instagram.com/srmeaswari/"
             class="px-1"
             >srmeaswari</a
+          >
+        </li>
+                <li class="flex flex-row space-x-2 items-center justify-start">
+          <SVGYouTube /><a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCIgEM4SN2v-gEMLp7zl8vIw"
+            class="px-1"
+            >AI&DS DEPT</a
           >
         </li>
       </ul>

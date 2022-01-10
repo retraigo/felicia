@@ -85,7 +85,7 @@ export default [
     icon: `nav`,
   },*/
   {
-    name: `Join`,
+    name: `Join as Reviewer`,
     route: `/join`,
     key: `join`,
     icon: `participant`,

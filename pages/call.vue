@@ -62,8 +62,8 @@ export default {
       meta: [
         { hid: "title", name: "title", content: "Call For Papers" },
         { hid: "og:title", name: "og:title", content: "Call For Papers" },
-        { hid: "description", name: "description", content: article.description },
-        { hid: "og:description", name: "og:description", content: article.description },
+        { hid: "description", name: "description", content: this.article.description },
+        { hid: "og:description", name: "og:description", content: this.article.description },
       ],
     };
   },

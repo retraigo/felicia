@@ -43,18 +43,19 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: article.description,
+          content: this.article.description,
         },
         {
           hid: "og:description",
           name: "og:description",
-          content: article.description,
+          content: this.article.description,
         },
       ],
     };
   },
   async asyncData({ $content }) {
     const article = await $content("submission").fetch();
+    console.log(article)
     return {
       article,
     };

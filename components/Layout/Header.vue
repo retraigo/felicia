@@ -130,7 +130,7 @@ export default {
             </NuxtLink>
           </div>
           <div
-            :class="`z-40 block h-full top-0 left-0 bg-white md:bg-transparent fixed md:static transform transition duration-500 ease-in-out md:translate-x-0 p-8 md:p-0 md:block ${
+            :class="`z-40 block h-full top-0 left-0 bg-white dark:bg-gray-900 md:bg-transparent fixed md:static transform transition duration-500 ease-in-out md:translate-x-0 p-8 md:p-0 md:block ${
               toggleNav ? 'translate-x-0' : '-translate-x-110 md:ml-6'
             }`"
           >
@@ -142,6 +142,8 @@ export default {
                   md:hidden
                   items-center
                   bg-black md:bg-white
+                  dark:bg-blue-400
+                  md:dark:bg-blue-400
                   shadow-md
                   top-0
                   left-0
@@ -173,7 +175,7 @@ export default {
                     :class="
                       (title === key
                         ? 'text-gray-700 dark:text-white border-gray-400 '
-                        : 'text-black border-transparent ') +
+                        : 'text-black dark:text-white border-transparent ') +
                       (Array.isArray(route) ? 'group ' : '') +
                       'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-b-2  block'
                     "
@@ -218,7 +220,7 @@ export default {
                     :href="'javascript:void(0)'"
                     @click = "x => setState(key)"
                     :class="
-                      (title === key ? 'text-gray-700 dark:text-white ' : 'text-black ') +
+                      (title === key ? 'text-gray-700 dark:text-white ' : 'dark:text-white text-black ') +
                       (Array.isArray(route) ? 'group ' : '') +
                       'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-transparent border-b-2  block'
                     "
@@ -266,7 +268,7 @@ export default {
                     v-else
                     :href="typeof route == 'string' ? route : '#'"
                     :class="
-                      (title === key ? 'text-gray-700 dark:text-white ' : 'text-black ') +
+                      (title === key ? 'text-gray-700 dark:text-white ' : 'dark:text-white text-black ') +
                       (Array.isArray(route) ? 'group ' : '') +
                       'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-transparent border-b-2  block'
                     "

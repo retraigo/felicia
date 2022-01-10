@@ -21,7 +21,8 @@
             <div
               class="
                 py-2
-                text-lg  text-gray-700 dark:text-white
+                text-lg text-gray-700
+                dark:text-white
                 font-semibold
                 border-gray-400 border-b-2
               "
@@ -42,6 +43,12 @@
           </div>
         </div>
       </div>
+      <div class="p-1">
+        <img
+          class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+          src="/eec3.webp"
+        />
+      </div>
       <div
         class="
           flex flex-col
@@ -56,7 +63,8 @@
             <div
               class="
                 py-2
-                text-lg  text-gray-700 dark:text-white
+                text-lg text-gray-700
+                dark:text-white
                 font-semibold
                 border-gray-400 border-b-2
               "
@@ -81,6 +89,32 @@
                 United States of America.
               </p>
             </div>
+            <div
+              class="
+                grid grid-cols-1
+                md:grid-cols-4
+                space-y-4
+                md:space-y-0 md:space-x-4
+                items-center
+              "
+            >
+              <img
+                class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                src="/icons/1.svg"
+              />
+              <img
+                class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                src="/icons/2.svg"
+              />
+              <img
+                class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                src="/icons/3.svg"
+              />
+              <img
+                class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                src="/icons/4.svg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -102,7 +136,8 @@
                 class="
                   p-2
                   block
-                   text-gray-700 dark:text-white
+                  text-gray-700
+                  dark:text-white
                   font-semibold
                   border-gray-400 border-b-2
                 "

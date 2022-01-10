@@ -44,16 +44,6 @@ export default {
       meta: [
         { hid: "title", name: "title", content: "Keynote Speakers" },
         { hid: "og:title", name: "og:title", content: "Keynote Speakers" },
-        {
-          hid: "description",
-          name: "description",
-          content: article.description,
-        },
-        {
-          hid: "og:description",
-          name: "og:description",
-          content: article.description,
-        },
       ],
     };
   },

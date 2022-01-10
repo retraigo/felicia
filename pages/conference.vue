@@ -57,12 +57,12 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: conference.description,
+          content: this.conference.description,
         },
         {
           hid: "og:description",
           name: "og:description",
-          content: conference.description,
+          content: this.conference.description,
         },
       ],
     };

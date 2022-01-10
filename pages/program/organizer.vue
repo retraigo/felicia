@@ -51,12 +51,12 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: article.description,
+          content: this.article.description,
         },
         {
           hid: "og:description",
           name: "og:description",
-          content: article.description,
+          content: this.article.description,
         },
       ],
     };
