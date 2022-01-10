@@ -19,9 +19,9 @@ description: Details about registration fee is given here. All Accepted papers w
 
 <p class = "underline font-semibold">IVCMASM 2021 is proud to have partnership with AIP Publishing, United States of America.</p>
         <div class="md:flex flex-row space-y-4 md:space-y-0 md:space-x-4 items-center justify-center">
-          <img class="h-36 w-auto object-fit mx-auto" src="/icons/1.svg" />
-          <img class="h-36 w-auto object-fit mx-auto" src="/icons/2.svg" />
-          <img class="h-36 w-auto object-fit mx-auto" src="/icons/3.svg" />
-          <img class="h-36 w-auto object-fit mx-auto" src="/icons/4.svg" />
+          <img class="h-36 w-auto object-fit mx-auto" alt = "AIP Publishing" src="/icons/1.svg" />
+          <img class="h-36 w-auto object-fit mx-auto" alt = "Scopus" src="/icons/2.svg" />
+          <img class="h-36 w-auto object-fit mx-auto" alt = "Web of Science" src="/icons/3.svg" />
+          <img class="h-36 w-auto object-fit mx-auto" alt = "Google Scholar" src="/icons/4.svg" />
         </div>
 </div>

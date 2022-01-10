@@ -2,7 +2,7 @@
   <div class="p-4">
     <div class="flex flex-col space-y-4 w-full items-stretch">
       <div class="p-1 hidden md:block">
-        <img src="/icvmasm.webp" />
+        <img src="/icvmasm.webp" alt = "IVCMASM" />
       </div>
       <div class="p-4">
         <HomePage />
@@ -47,6 +47,7 @@
         <img
           class="flex-none flex-grow-0 h-36 w-auto mx-auto"
           src="/eec3.webp"
+          alt = "Easwari Engineering College"
         />
       </div>
       <div
@@ -100,18 +101,22 @@
             >
               <img
                 class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                alt = "AIP Publishing"
                 src="/icons/1.svg"
               />
               <img
                 class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                alt = "Scopus"
                 src="/icons/2.svg"
               />
               <img
                 class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                alt = "Web of Science"
                 src="/icons/3.svg"
               />
               <img
                 class="flex-none flex-grow-0 h-36 w-auto mx-auto"
+                alt = "Google Scholar"
                 src="/icons/4.svg"
               />
             </div>
