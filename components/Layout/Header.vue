@@ -30,6 +30,7 @@ export default {
       this.toggleNav = true;
     },
     setState(ref) {
+      this.resetState()
       this.toggled[ref] = !this.toggled[ref]
     },
     anyState() {
