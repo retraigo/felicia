@@ -72,13 +72,14 @@ export default [
     key: `program`,
     icon: `tv`,
   },
+/*
   {
     name: `News`,
     route: `/news`,
     key: `news`,
     icon: `plussquare`,
   },
-/*  {
+  {
     name: `Venue`,
     route: `/venue`,
     key: `venue`,
