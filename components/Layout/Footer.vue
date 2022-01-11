@@ -26,7 +26,7 @@
         md:text-black
       "
     >
-      <div class="flex-1">
+      <div class="flex-1 invisible">
         <li>
           Copyright
           <a

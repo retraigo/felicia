@@ -58,7 +58,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap',
+ //   '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxtjs/toast'
   ],
