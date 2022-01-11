@@ -86,7 +86,7 @@
               </ul>
 
               <p class="text-xl font-bold text-center">
-                IVCMASM 2021 is proud to have partnership with AIP Publishing,
+                IVCMASM 2022 is proud to have partnership with AIP Publishing,
                 United States of America.
               </p>
             </div>

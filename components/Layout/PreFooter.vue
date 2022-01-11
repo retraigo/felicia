@@ -20,7 +20,7 @@
           <img class="h-36 w-auto object-fit mx-auto" alt = "Easwari Engineering College" src="/EEC_ICON.webp" />
 
           <img class="h-36 w-auto object-fit mx-auto" alt = "AIP Publishing" src="/icons/1.svg" />
-          <div class = "p-2">IVCMASM 2021 is proud to have partnership with AIP Publishing,
+          <div class = "p-2">IVCMASM 2022 is proud to have partnership with AIP Publishing,
                 United States of America.</div>
         </div>
       </div>
