@@ -7,8 +7,8 @@ description: Details about registration fee is given here. All Accepted papers w
 
 | Submission                                    | Fee     |
 | --------------------------------------------- | ------- |
-| UG Students / PG Students / Research Scholars | 500 INR |
-| Faculty                                       | 300 INR |
+| UG Students / PG Students / Research Scholars | 300 INR |
+| Faculty                                       | 500 INR |
 | For Foreign Author                            | 135 USD |
 
 **Paper Submission:** [Click Here](https://easychair.org/conferences/?conf=ivcmasm2022)
